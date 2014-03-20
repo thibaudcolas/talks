@@ -13,9 +13,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Navigateurs et performance : The Critical Path</title>
+		<title>Navigateurs et performance</title>
 
-		<meta name="description" content="Navigateurs et performance : The Critical Path">
+		<meta name="description" content="Navigateurs et performance">
 		<meta name="author" content="Thibaud Colas">
 		<link rel="author" href="https://plus.google.com/+ThibaudColas">
 
@@ -42,233 +42,315 @@
 	</head>
 
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+
+
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+					<h1>Navigateurs <small>et</small> performance</h1>
+					<br>
+					<h3><em>Le chemin critique</em></h3>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
+					<h2>Sources d'information</h2>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li><a href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7">Ilya Grigork, <em>Optimizing the Critical Rendering Path</em></a></li>
+						<li><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Patrick Hamann, <em>CSS And The Critical Path</em></a></li>
+						<li><a href="https://www.youtube.com/watch?v=R8W_6xWphtw">Paul Irish, Keynote @ Fluent 2014</a></li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
+					<h2>Points abordés</h2>
+					<ul>
+						<li><h3>L'enjeu</h3></li>
+						<li><h3>Le défi</h3></li>
+						<li><h3>Moteurs de rendu</h3></li>
+						<li><h3>Le chemin critique</h3></li>
+						<li><h3>L'avenir</h3></li>
+					</ul>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon.css#/themes">Moon</a> -
-						<a href="?theme=simple.css#/themes">Simple</a> -
-						<a href="?theme=solarized.css#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
+				<section data-background="rgb(93, 186, 189)">
+					<h2>L'enjeu</h2>
 				</section>
 
 				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
+					<h2>Pourquoi ?</h2>
+					<ul>
+						<li>Impact direct sur le <b>business</b>.</li>
+						<li>Impact direct sur le <b>référencement</b>.
+						</li>
+						<li>Nous ne sommes plus patients et n'hésitons
+							pas à aller ailleurs.</li>
+					</ul>
+					<p><small><a href="http://www.llaumgui.com/public/slides/web-performances/">Source : llaumgui.com</a></small></p>
 				</section>
 
 				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
+					<h2>Nouvelles attentes</h2>
+					<a class="image" href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/" target="_blank">
+						<img src="img/userbase-expectation.png">
+					</a>
+					<p><small><a href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/">Source : StrangeLoop</a></small></p>
 				</section>
 
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
+					<h2>Nouveaux usages</h2>
+					<a class="image" href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/" target="_blank">
+						<img src="img/userbase-behavior.png">
+					</a>
+					<p><small><a href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/">Source : StrangeLoop</a></small></p>
 				</section>
 
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					<h2>Impact direct</h2>
+					<a class="image" href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/" target="_blank">
+						<img src="img/performance-indicators.png">
+					</a>
+					<p><small><a href="http://www.strangeloopnetworks.com/resources/infographics/web-performance-and-user-expectations/poster-visualizing-web-performance/">Source : StrangeLoop</a></small></p>
+				</section>
 
-    var nodes = document.querySelectorAll( selector );
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+				<section data-background="rgb(200, 93, 93)">
+					<h2>La vitesse est une <br><strong>fonctionnalité</strong></h2>
+				</section>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				<section data-background="rgb(93, 186, 189)">
+					<h2>Le défi</h2>
 				</section>
 
 				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2">like this</a>.
-					</p>
+					<h2>Diminuer l'attente</h2>
+					<a class="image" href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7" target="_blank">
+						<img src="img/user-reaction.png">
+					</a>
+					<ul>
+						<li>Affichage des pages en moins de <strong>1000ms</strong></li>
+						<li>Réponse aux interactions en <strong>100ms</strong></li>
+					</ul>
+					<p><br><small><a href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7">Source : Ilya Grigork, <em>Optimizing the Critical Rendering Path</em></a></small></p>
+				</section>
+
+				<section data-background="rgb(200, 93, 93)">
+					<h2>Objectif : <br>affichage en moins d'<strong>une seconde</strong></h2>
+				</section>
+
+				<section data-background="rgb(93, 186, 189)">
+					<h2>Moteurs de rendu</h2>
 				</section>
 
 				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
+					<a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+						<img src="img/engine-overview.png">
+					</a>
+					<p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
 				</section>
 
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
+					<a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+						<img src="img/engine-network.png">
+					</a>
+					<p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+				</section>
+
+				<section>
+					<a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+						<img src="img/engine-dom.png">
+					</a>
+					<p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+				</section>
+
+				<section>
+					<a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+						<img src="img/engine-cssom.png">
+					</a>
+					<p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+				</section>
+
+				<section>
+					<a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+						<img src="img/engine-javascript.png">
+					</a>
+					<p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+				</section>
+
+				<section>
+					<a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+						<img src="img/engine-complete.png">
+					</a>
+					<p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+				</section>
+
+				<section>
+					<a class="image" href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7" target="_blank">
+						<img src="img/web-request.png">
+					</a>
+					<ul>
+						<li>Lookup DNS : <strong>200ms</strong></li>
+						<li>Connexion TCP (SYN, ACK) : <strong>200ms</strong></li>
+						<li>Handshake TLS (HTTPS) : <strong>200ms</strong></li>
+						<li>Requête HTTP : <strong>200ms</strong></li>
+						<li>Ne parlons même pas de redirection...</li>
+					</ul>
+					<p><br><small><a href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7">Source : Ilya Grigork, <em>Optimizing the Critical Rendering Path</em></a></small></p>
+				</section>
+
+				<section>
+					<p>Sans HTTPS, il reste <strong>400ms</strong> pour le traitement serveur, l'envoi de la réponse et le rendu client.</p>
+					<p><br>... en théorie.</p>
+				</section>
+
+				<section>
+					<h2>TCP Slow Start</h2>
+					<a class="image" href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7" target="_blank">
+						<img src="img/tcp-slow-start.png">
+					</a>
+					<ul>
+						<li>TCP n'utilise pas toute la bande passante disponible</li>
+						<li>C'est une <em>feature</em>, pas un bug</li>
+					</ul>
+					<p><br><small><a href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7">Source : Ilya Grigork, <em>Optimizing the Critical Rendering Path</em></a></small></p>
+				</section>
+
+				<section>
+					<h2>Exemple : 40kb en TCP</h2>
+					<a class="image" href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7" target="_blank">
+						<img src="img/tcp-example.png">
+					</a>
+					<ul>
+						<li>= <strong style="font-size: 200%;">700ms !</strong></li>
+						<li>+ DNS, TLS, etc</li>
+						<li>-> Un round-trip = 14kb</li>
+					</ul>
+					<p><br><small><a href="https://docs.google.com/presentation/d/1IRHyU7_crIiCjl0Gvue0WY3eY_eYvFQvSfwQouW9368/present#slide=id.g1e697bbb_0_7">Source : Ilya Grigork, <em>Optimizing the Critical Rendering Path</em></a></small></p>
+				</section>
+
+				<section>
+					<p>Déprimant, mais</p>
+					<ul>
+						<li>Seul le rendu du contenu visible est nécessaire</li>
+						<li>HTML est parsé de manière incrémentale</li>
+						<li>CSS est bloquant mais JavaScript peut être déferré</li>
+					</ul>
+					<a class="image" href="#" target="_blank">
+						<img src="img/seal-circle.gif" width="100%">
 					</a>
 				</section>
 
+				<section data-background="rgb(200, 93, 93)">
+					<h2>Objectif : <br>afficher le contenu visible, <br><em>critique</em></h2>
+				</section>
+
+				<section data-background="rgb(93, 186, 189)">
+					<h2>Le chemin critique</h2>
+				</section>
+
 				<section>
-					<h2>Stellar Links</h2>
+					<blockquote>
+						<p>Le chemin de rendu critique relie les échanges réseau à l'affichage du contenu visible sur l'écran. <em>Above the fold</em></p>
+					</blockquote>
+					<p><br></p>
 					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+						<li>Le HTML est envoyé incrémentalement, la partie visible en 14kb</li>
+						<li>Traitement sans redirection, on peut s'en passer</li>
+						<li>Le CSS critique doit être inliné</li>
+						<li>Le JavaScript doit être asynchrone</li>
 					</ul>
 				</section>
 
 				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
+					<h2>Above the fold</h2>
+					<a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+						<img src="img/above-the-fold.png">
+					</a>
+					<p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+				</section>
+
+				<section>
+					<h2>Résultat</h2>
+					<a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+						<img src="img/inline-results.png">
+					</a>
+					<p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+				</section>
+
+				<section>
+					<h2>localStorage</h2>
+					<a class="image" href="#" target="_blank">
+						<img src="img/guardian-localstorage.png">
+					</a>
+					<ul>
+						<li>Les ressources ne sont pas chargées lors de navigations ultérieures</li>
+						<li>Technique utilisée par Google, entre autres</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Résultat</h2>
+					<a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+						<img src="img/localstorage-result.png">
+					</a>
+					<p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+				</section>
+
+				<section data-background="img/success-kid.jpg">
+				</section>
+
+				<section data-background="rgb(93, 186, 189)">
+					<h2>L'avenir</h2>
+				</section>
+
+				<section>
+					<h2>Resource Priorities</h2>
+					<p><a href="https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/ResourcePriorities/Overview.html">Editor's Draft W3C</a></p>
+					<pre><code data-trim contenteditable>
+&lt;html&gt;
+	&lt;head&gt;
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css" lazyload="true">
+	&lt;/head&gt;
+&lt;/html&gt;
+					</code></pre>
+					<ul>
+						<li><em> Using the lazyload attribute on a resource will signal to the User Agent that in cases of network resource contention, it may lower the download priority of that resource.</em></li>
+						<li><em>Using the postpone attribute, developers can specify which resources the User Agent should not download until they are visible to the user. </em></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Client Hints</h2>
+					<p><a href="http://tools.ietf.org/html/draft-grigorik-http-client-hints-00">Draft IETF par <em>Ilya Grigorik</em></a></p>
+					<a class="image" href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path" target="_blank">
+						<img src="img/client-hints.png">
+					</a>
+					<ul>
+						<li>Nouveau header HTTP</li>
+						<li>Largeur, hauteur, densité de pixels</li>
+					</ul>
+					<p><small><a href="https://speakerdeck.com/patrickhamann/css-and-the-critical-path">Source : Patrick Hamann, <em>CSS And The Critical Path</em></a></small></p>
+				</section>
+
+				<section>
+					<h2>SPDY/HTTP 2.0</h2>
+					<p>Draft en cours de finalisation</p>
+					<ul>
+						<li>Une connexion par origine</li>
+						<li>Latence plus faible sur mobile</li>
+						<li>Et bien plus</li>
+					</ul>
+				</section>
+
+				<section data-background="white">
+					<h2>Merci !</h2>
+					<p><br></p>
+					<p><small>Par <a href="http://thibaudcolas.fr">Thibaud Colas</a>, partage en <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></small></p>
+					<ul>
+						<li>Slides sur <a href="http://talks.thib.me/navigateurs-performance/">talks.thib.me/navigateurs-performance</a></li>
+						<li>Sources sur <a href="https://github.com/ThibWeb/talks/tree/master/2014/navigateurs-performance">GitHub</a></li>
+					</ul>
 				</section>
 
 			</div>
@@ -289,7 +371,7 @@ function linkify( selector ) {
 				history: true,
 				keyboard: true,
 				overview: true,
-				center: false,
+				center: true,
 				hideAddressBar: true,
 				transition: 'none',
 				transitionSpeed: 'fast',
