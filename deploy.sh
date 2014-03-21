@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cp -R 2014/* build/
+cp -R root/* build/
 cd build
 git add -f .
 git commit -m "Deploy to gh-pages"
