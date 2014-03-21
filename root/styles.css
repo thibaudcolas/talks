@@ -1,0 +1,40 @@
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    font-family: Sans-Serif;
+    margin: 20px auto;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+ul {
+    text-align: left;
+}
+
+li {
+    list-style-type: none;
+}
+
+li:before {
+    content:'•';
+    margin-right: 10px;
+    color: lightgray;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
