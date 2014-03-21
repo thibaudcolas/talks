@@ -30,7 +30,7 @@ li {
 li:before {
     content:'•';
     margin-right: 10px;
-    color: lightgray;
+    color: #333;
 }
 
 footer {
