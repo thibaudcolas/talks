@@ -21,16 +21,14 @@ h1 a {
 
 ul {
     text-align: left;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 10px;
 }
 
 li {
-    list-style-type: none;
-}
-
-li:before {
-    content:'•';
-    margin-right: 10px;
-    color: #333;
+    list-style-type: square;
+    padding: 5px;
 }
 
 footer {
