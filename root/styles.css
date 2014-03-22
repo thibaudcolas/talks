@@ -19,6 +19,10 @@ h1 a {
     text-decoration: none;
 }
 
+nav {
+    margin: 10px;
+}
+
 ul {
     text-align: left;
     max-width: 500px;
