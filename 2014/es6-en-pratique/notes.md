@@ -19,3 +19,5 @@ JavaScript, ES6, Harmony, Features
 > En pratique, le talk débutera par une présentation rapide de ce qu'est ES6 (1min), suivi des fonctionnalités (probablement au nombre de trois, 3min), suivi d'une vue d'ensemble des solutions pour essayer ES6 soi-même (Node --harmony, Chrome 35+, Traceur Compiler, 1min).
 
 > J'ai déjà présenté devant de petites audiences (20-30pers) dans un cadre professionnel et dans certains User Group de Montpellier. Avant la conférence, ce talk sera présenté en version allongée à mes collègues de travail.
+
+> NB : le titre pourrait être ajusté selon l'inspiration du moment ("ES6 en pratique", "ES6 en bref", "ES6 pour de vrai", etc).
