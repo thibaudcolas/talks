@@ -2,9 +2,10 @@
 
 echo "Starting build"
 
+rm -rf build/*
 cp -R 2014/* build/
 rm -rf build/*/node_modules
-rm -rf build/**/node_modules
+rm -rf build/*/demo
 cp -R root/* build/
 cd build
 
