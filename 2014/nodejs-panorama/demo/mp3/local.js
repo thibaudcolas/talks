@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// https://gist.github.com/TooTallNate/3947591
 // ./local.js shamandalie.mp3
 
 var fs = require('fs');

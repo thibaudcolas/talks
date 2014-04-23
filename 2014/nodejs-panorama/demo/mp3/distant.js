@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// https://gist.github.com/TooTallNate/3947591
 // distant.js http://localhost:1337/thismustbetheplace.mp3
 
 var request = require('request');
