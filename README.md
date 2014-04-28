@@ -10,4 +10,4 @@ Public talks in either french or english, given at various events. All tallks ar
 
 ## Upcoming
 
-- ES6 en pratique
+- [ES6 en pratique](http://talks.thib.me/es6-en-pratique)
