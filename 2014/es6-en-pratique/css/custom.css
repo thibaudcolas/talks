@@ -10,3 +10,14 @@
 .reveal .progress span {
   background-color: #336588;
 }
+
+h1, h2, h3 {
+  text-transform: none !important;
+}
+
+.inline-img {
+  border: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  top: 35px !important;
+}
