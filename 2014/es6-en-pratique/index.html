@@ -93,12 +93,16 @@ var addES5 = function(x, y) {
   return x + y;
 };
 
+var addES6 = function(x, y = 5) {
+  return x + y;
+};
 
-
-var addES6s = function(x, y = 5) {
+var addES6Compiled = function(x) {
+  var y = arguments[1] !== (void 0) ? arguments[1] : 5;
   return x + y;
 };
 					</code></pre>
+					<p>Remplace <code>(typeof myVar === "undefined")</code></p>
 				</section>
 
 
@@ -124,73 +128,75 @@ var {x: x, y: y} = c.center; // ES6
 
 var {x, y} = c.center; // ES6 raccourci
 					</code></pre>
+					<p>Assignement multiple selon un pattern</p>
 				</section>
 
 				<section>
 					<h2>Destructuring</h2>
 					<pre><code data-trim contenteditable>
-var Circle = function(x, y, r) {
-  this.center = {
-    x: x,
-    y: y
-  };
-  this.radius = r;
-};
-
-var c = new Circle(3, 5, 10);
-
-
-var getDiameter = function(c) { // ES5
+var getDiameterES5 = function(c) {
   return c.radius * 2;
 };
 
 
-var getDiameter = function({radius: r}) { // ES6
+var getDiameterES6 = function({radius: r}) {
+  return r * 2;
+};
+
+
+var getDiameterES6Compiled = function($__0) {
+  var r = $__0.radius;
   return r * 2;
 };
 					</code></pre>
+					<p>Fonctionne aussi pour les paramètres !</p>
 				</section>
 
 				<section>
 					<h2>Lambdas / Arrow functions</h2>
 					<pre><code data-trim contenteditable>
-var arr = [5, 10, 42];
-
-
-var square = function (x) { // ES5
+var squareES5 = function (x) {
   return x * x;
 };
 
 
-var square = x => x * x; // ES6
+var squareES6 = x => x * x;
 
 
-console.log(arr.map(square));
-
+var squareES6Compiled = (function(x) {
+  return x * x;
+});
 					</code></pre>
+					<br>
+					<p>Syntaxe plus lisible, <code>return</code> implicite</p>
+					<p>Programmation fonctionnelle FTW</p>
 				</section>
 
 				<section>
 					<h2>Lambdas / Arrow functions</h2>
 					<pre><code data-trim contenteditable>
 var ES5Tree = function() {
-  var self = this;
+  var self = this; // Contexte A
   self.age = 0;
 
   setInterval(function () {
-    self.age++;
+    self.age++; // Contexte B :(
   }, 2000);
-}
+};
 
 
 var ES6Tree = function() {
-  this.age = 0;
+  this.age = 0; // Contexte C
 
   setInterval(() => {
-    this.age++;
+    this.age++; // Contexte C !
   }, 2000);
-}
+};
+
+var tree = new ES6Tree();
 					</code></pre>
+					<p></p>
+
 				</section>
 
 				<section>
