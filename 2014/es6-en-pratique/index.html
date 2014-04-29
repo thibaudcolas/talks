@@ -120,11 +120,10 @@ var Circle = function(x, y, r) {
 var c = new Circle(3, 5, 10);
 
 // ES5
-var x = c.center.x;
-var y = c.center.y;
+var centerX = c.center.x;
+var centerY = c.center.y;
 
-
-var {x: x, y: y} = c.center; // ES6
+var {x: centerX, y: centerY} = c.center; // ES6
 
 var {x, y} = c.center; // ES6 raccourci
 					</code></pre>
@@ -184,12 +183,11 @@ var ES5Tree = function() {
   }, 2000);
 };
 
-
 var ES6Tree = function() {
   this.age = 0; // Contexte C
 
   setInterval(() => {
-    this.age++; // Contexte C !
+    this.age++; // Contexte C toujours !
   }, 2000);
 };
 
