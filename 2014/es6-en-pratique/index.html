@@ -59,6 +59,18 @@
 				</section>
 
 				<section>
+					<h2>Évolution du standard</h2>
+					<br>
+					<ul>
+						<li>ES3 : 1999 — regex, try/catch</li>
+						<li>ES5 : 2009 — "use strict", JSON</li>
+						<li>ES6 : 2014 ? — classes, générateurs, modules, métaprogrammation</li>
+						<li>ES7 : WIP — surcharge d'opérateurs, pattern matching, traits</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Support des fonctionnalités</h2>
 					<a href="https://kangax.github.io/es5-compat-table/es6/"><img src="img/compatibility-table.png" alt=""></a>
 					<p>Liste de features sur GitHub : <a href="https://github.com/lukehoban/es6features">lukehoban/es6features</a></p>
 				</section>
@@ -68,20 +80,20 @@
 					<br>
 					<br>
 					<p>Compatibles Traceur &amp; Firefox 24+</p>
-					<p>Versions originales et compilées sur GitHub : <br><a href="https://github.com/ThibWeb/es6-mix-it/">ThibWeb/es6-mix-it</a></p>
+					<p>Versions originales et transpilées sur GitHub : <br><a href="https://github.com/ThibWeb/es6-mix-it/">ThibWeb/es6-mix-it</a></p>
 				</section>
 
 				<section>
 					<h2>Default parameters</h2>
 					<pre><code data-trim contenteditable>
-var f = function(x, y) {
+var addES5 = function(x, y) {
   y = y ? y : 5;
   return x + y;
 };
 
 
 
-var f = function(x, y = 5) {
+var addES6s = function(x, y = 5) {
   return x + y;
 };
 					</code></pre>
