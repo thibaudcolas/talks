@@ -21,3 +21,8 @@ h1, h2, h3 {
   position: relative !important;
   top: 35px !important;
 }
+
+pre code {
+  font-size: 130% !important;
+  max-height: 500px !important;
+}

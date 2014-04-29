@@ -58,8 +58,58 @@
 					<p><a href="http://twitter.com/ThibWeb"><img class="inline-img" src="img/tails.png" alt="ThibWeb"></a> Thibaud Colas - <a href="http://twitter.com/ThibWeb">@ThibWeb</a><br/> Ingénieur Développeur @ <img class="inline-img" src="img/cgi-logo.png" alt="CGI"></p>
 				</section>
 
-				<section data-background="rgba(93, 186, 189, 0.5)">
+				<section>
+					<a href="https://kangax.github.io/es5-compat-table/es6/"><img src="img/compatibility-table.png" alt=""></a>
+					<p>Liste de features sur GitHub : <a href="https://github.com/lukehoban/es6features">lukehoban/es6features</a></p>
+				</section>
 
+				<section data-background="rgba(93, 186, 189, 0.5)">
+					<h2>Exemples</h2>
+					<br>
+					<br>
+					<p>Compatibles Traceur &amp; Firefox 24+</p>
+					<p>Versions originales et compilées sur GitHub : <br><a href="https://github.com/ThibWeb/es6-mix-it/">ThibWeb/es6-mix-it</a></p>
+				</section>
+
+				<section>
+					<h2>Default parameters</h2>
+					<pre><code data-trim contenteditable>
+var f = function(x, y) {
+  y = y ? y : 5;
+  return x + y;
+};
+
+
+
+var f = function(x, y = 5) {
+  return x + y;
+};
+					</code></pre>
+				</section>
+
+
+				<section>
+					<h2>Destructuring</h2>
+					<pre><code data-trim contenteditable>
+var Circle = function(x, y, r) {
+  this.center = {
+    x: x,
+    y: y
+  };
+  this.radius = r;
+};
+
+var c = new Circle(3, 5, 10);
+
+// ES5
+var x = c.center.x;
+var y = c.center.y;
+
+
+var {x: x, y: y} = c.center; // ES6
+
+var {x, y} = c.center; // ES6 raccourci
+					</code></pre>
 				</section>
 
 				<section>
@@ -75,28 +125,57 @@ var Circle = function(x, y, r) {
 
 var c = new Circle(3, 5, 10);
 
-var {x, y} = c.center;
+
+var getDiameter = function(c) { // ES5
+  return c.radius * 2;
+};
+
+
+var getDiameter = function({radius: r}) { // ES6
+  return r * 2;
+};
 					</code></pre>
 				</section>
 
-				<section data-background="rgba(93, 186, 189, 0.5)">
+				<section>
 					<h2>Lambdas / Arrow functions</h2>
-				</section>
-
-				<section>
 					<pre><code data-trim contenteditable>
-						console.log("Hello World");
+var arr = [5, 10, 42];
+
+
+var square = function (x) { // ES5
+  return x * x;
+};
+
+
+var square = x => x * x; // ES6
+
+
+console.log(arr.map(square));
+
 					</code></pre>
 				</section>
 
-
-				<section data-background="rgba(93, 186, 189, 0.5)">
-					<h2>Default parameters, rest, spread</h2>
-				</section>
-
 				<section>
+					<h2>Lambdas / Arrow functions</h2>
 					<pre><code data-trim contenteditable>
-						console.log("Hello World");
+var ES5Tree = function() {
+  var self = this;
+  self.age = 0;
+
+  setInterval(function () {
+    self.age++;
+  }, 2000);
+}
+
+
+var ES6Tree = function() {
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++;
+  }, 2000);
+}
 					</code></pre>
 				</section>
 
