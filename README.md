@@ -7,7 +7,4 @@ Public talks in either french or english, given at various events. All tallks ar
 
 - [Navigateurs et performance : le chemin critique](http://talks.thib.me/navigateurs-performance/)
 - [Node.js : panorama de la plateforme](http://talks.thib.me/nodejs-panorama/)
-
-## Upcoming
-
-- [ES6 en pratique](http://talks.thib.me/es6-en-pratique)
+- [ES6 en pratique - Mix-IT](http://talks.thib.me/es6-en-pratique)
