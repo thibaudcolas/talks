@@ -1,9 +1,10 @@
 .reveal .progress {
-  height: 15px;
+  height: 20px;
 }
 
 .reveal .slide-number {
   font-size: 25px;
+  bottom: 20px;
   color: #333;
 }
 
