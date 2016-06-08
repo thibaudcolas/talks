@@ -12,3 +12,12 @@ git init
 cd ..
 ./deploy.sh
 ```
+
+## Credits
+
+### Content
+
+Presentations available under a [CC0 1.0 Universal (CC0 1.0)
+Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+
+Most slide decks built with [reveal.js](https://github.com/hakimel/reveal.js)
