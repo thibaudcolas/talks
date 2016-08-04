@@ -6,11 +6,16 @@ Public talks in either french or english, given at various events. All tallks ar
 ## Deployment
 
 ```sh
+./deploy.sh
+```
+
+For the first time, do this first:
+
+```sh
 mkdir build
 cd build/
 git init
 cd ..
-./deploy.sh
 ```
 
 ## Credits
