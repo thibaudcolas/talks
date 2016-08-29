@@ -1,71 +1,71 @@
 <!doctype html>
 <html lang="en">
 
-	<!--
-		Keyboard shortcuts:
+    <!--
+        Keyboard shortcuts:
 
-			o - Slide overview
-			b - Pause
-			f - Full screen
-			Arrow keys to move from slide to slide
-	-->
+            o - Slide overview
+            b - Pause
+            f - Full screen
+            Arrow keys to move from slide to slide
+    -->
 
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>Integrating D3 into React</title>
+        <title>Integrating D3 into React</title>
 
-		<meta name="description" content="Integrating D3 into React">
-		<meta name="author" content="Thibaud Colas">
-		<link rel="author" href="https://plus.google.com/+ThibaudColas">
+        <meta name="description" content="Integrating D3 into React">
+        <meta name="author" content="Thibaud Colas">
+        <link rel="author" href="https://plus.google.com/+ThibaudColas">
 
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
-		<link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+        <link rel="stylesheet" href="css/custom.css">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/highlight/docco.css">
-		<!-- <link rel="stylesheet" href="lib/css/highlight/magula.css"> -->
-		<!-- <link rel="stylesheet" href="lib/css/highlight/xcode.css"> -->
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/highlight/docco.css">
+        <!-- <link rel="stylesheet" href="lib/css/highlight/magula.css"> -->
+        <!-- <link rel="stylesheet" href="lib/css/highlight/xcode.css"> -->
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
-	</head>
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+    </head>
 
-	<body>
-		<div class="reveal">
-			<div class="slides">
+    <body>
+        <div class="reveal">
+            <div class="slides">
 
 
-				<section>
-					<br>
+                <section>
+                    <br>
                     <h1>Integrating D3 into React</h1>
-					<br>
-					<br>
-					<br>
                     <br>
                     <br>
                     <br>
-					<p>Thibaud Colas - <a href="http://twitter.com/ThibWeb">@ThibWeb</a><br><br> Slides: <a href="http://talks.thib.me/integrating-d3-into-react">talks.thib.me/integrating-d3-into-react</a></p>
-				</section>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Thibaud Colas - <a href="http://twitter.com/thibaud_colas">@thibaud_colas</a><br><br> Slides: <a href="http://talks.thib.me/integrating-d3-into-react">talks.thib.me/integrating-d3-into-react</a></p>
+                </section>
 
-				<section>
-					<p>This approach is inspired by a <a href="http://nicolashery.com/integrating-d3js-visualizations-in-a-react-app/">blog post from Nicolas Hery</a>. It has also been taken for a spin by <a href="http://blog.siftscience.com/blog/2015/4/6/d-threeact-how-sift-science-made-d3-react-besties">the folks at sift science</a>.</p>
-				</section>
+                <section>
+                    <p>This approach is inspired by a <a href="http://nicolashery.com/integrating-d3js-visualizations-in-a-react-app/">blog post from Nicolas Hery</a>. It has also been taken for a spin by <a href="http://blog.siftscience.com/blog/2015/4/6/d-threeact-how-sift-science-made-d3-react-besties">the folks at sift science</a>.</p>
+                </section>
 
-				<section>
-					<h2>Advantages and tradeoffs</h2>
+                <section>
+                    <h2>Advantages and tradeoffs</h2>
                     <ul>
                         <li>Clearly separates concerns between D3 (rendering the chart) and React (managing the data &amp; lifecycle)</li>
                         <li>Copy-pasteability of online examples</li>
@@ -74,16 +74,16 @@
                         <li>React relies on D3 to output the markup</li>
                         <li>State has to be synchronized between D3 chart and React component</li>
                     </ul>
-				</section>
+                </section>
 
-				<section data-background="rgba(93, 186, 189, 0.5)">
-					<blockquote>
+                <section data-background="rgba(93, 186, 189, 0.5)">
+                    <blockquote>
                         Use this approach if you value the ability to use the chart outside of React and idiomatic D3 code over the performance gains you'll have by using React's virtual DOM for SVG.
                     </blockquote>
-				</section>
+                </section>
 
-				<section>
-					<pre><code data-trim contenteditable>
+                <section>
+                    <pre><code data-trim contenteditable>
 export default class ProgressChart extends Chart {
 
     create() {
@@ -94,14 +94,14 @@ export default class ProgressChart extends Chart {
         const scales = this._scales(state.domain);
         this._drawBar(scales, state.data);
     }
-					</code></pre>
-				</section>
+                    </code></pre>
+                </section>
 
 
-				<section>
-					<h2>Hooking into React's lifecycle</h2>
+                <section>
+                    <h2>Hooking into React's lifecycle</h2>
                     <br>
-					<pre><code data-trim contenteditable>
+                    <pre><code data-trim contenteditable>
 componentDidMount() {
     this.createChart();
     window.addEventListener('resize', this.createChart);
@@ -119,17 +119,17 @@ componentWillUnmount() {
     this.state.chart.destroy();
     window.removeEventListener('resize', this.createChart);
 },
-					</code></pre>
-				</section>
+                    </code></pre>
+                </section>
 
-				<section>
-					<h2>Other approaches</h2>
-					<br>
-					<ul>
-						<li><a href="https://ericbullington.com/blog/2014/11/16/react-d3-charts/">https://ericbullington.com/blog/2014/11/16/react-d3-charts/</a></li>
-						<li><a href="https://github.com/codesuki/react-d3-components">https://github.com/codesuki/react-d3-components</a></li>
-					</ul>
-				</section>
+                <section>
+                    <h2>Other approaches</h2>
+                    <br>
+                    <ul>
+                        <li><a href="https://ericbullington.com/blog/2014/11/16/react-d3-charts/">https://ericbullington.com/blog/2014/11/16/react-d3-charts/</a></li>
+                        <li><a href="https://github.com/codesuki/react-d3-components">https://github.com/codesuki/react-d3-components</a></li>
+                    </ul>
+                </section>
 
                 <section>
                     <h2>Code + Demo</h2>
@@ -139,50 +139,50 @@ componentWillUnmount() {
                         <li><a href="https://springload.github.io/react-d3-integration/">https://springload.github.io/react-d3-integration/</a></li>
                     </ul>
                 </section>
-			</div>
+            </div>
 
-		</div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
 
-		<script>
+        <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: false,
-				progress: true,
-				slideNumber: true,
-				history: true,
-				keyboard: true,
-				overview: true,
-				center: true,
-				hideAddressBar: true,
-				transition: 'none',
-				transitionSpeed: 'fast',
-				// ?theme=simple
-				theme: Reveal.getQueryHash().theme || 'sky',
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: false,
+                progress: true,
+                slideNumber: true,
+                history: true,
+                keyboard: true,
+                overview: true,
+                center: true,
+                hideAddressBar: true,
+                transition: 'none',
+                transitionSpeed: 'fast',
+                // ?theme=simple
+                theme: Reveal.getQueryHash().theme || 'sky',
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
 
-		</script>
+        </script>
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-34692999-3', 'thib.me');
-		  ga('send', 'pageview');
-		</script>
-	</body>
+          ga('create', 'UA-34692999-3', 'thib.me');
+          ga('send', 'pageview');
+        </script>
+    </body>
 </html>
