@@ -16,6 +16,6 @@ git commit -m "Deploy to gh-pages"
 
 echo "Starting push"
 
-git push -fq git@github.com:ThibWeb/talks.git "master:gh-pages"
+git push -fq git@github.com:thibaudcolas/talks.git "master:gh-pages"
 
 echo "Build finished"
