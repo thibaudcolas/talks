@@ -3,16 +3,16 @@ cache:
   directories:
   - node_modules
 install:
-- echo 'install'
+- bundle install
 script:
-- "./build.sh"
+- bundle exec jekyll build
 branches:
   except:
   - gh-pages
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: build
+  local_dir: _site
   github_token: "$GITHUB_TOKEN"
   on:
     branch: master
@@ -20,4 +20,4 @@ notifications:
   email: false
 env:
   global:
-    secure: bAuSLjnfidLXzxpE9smDCpGBFEo+cM7WQdpUY6UOEFZADa/wGyilA5pkCYnAgYc5pJ6KoQU8PeAnwT9pAVb3bV0V2CTdHwd7/+/AeKKtrOR5HOtgU/MG2W2DgOQ1qEdaQinFTFih5vz+aOXNBeD9Btl0xaEXGw1ZbPs0dNLKyGo=
+    secure: hvUlr/pOaRbfHjsxyCyb4rp80a7A4ZMrZjvytSRxMyZySuKpZBtGdoqMpb/FQM5NGjXhdvSSsrMfuF14LyVoKIuIf9Hs6s6zfIESQH5iIGngcbtsoQty+vX5swK0B8MMd4TgrjHg+k5RhwgGcyO3YPMCxGfclci+gJ1vSlp3usY=
