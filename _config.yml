@@ -1,7 +1,7 @@
 # Site settings
-title: Thibaud’s Viz
+title: Thibaud’s Talks
 email:
-description: A group of little visualizations / experiments running in the browser.
+description: 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://thib.me" # the base hostname & protocol for your site
 twitter_username: thibaud_colas
