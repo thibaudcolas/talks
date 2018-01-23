@@ -11,3 +11,9 @@ github_username:  thibaudcolas
 markdown: kramdown
 
 google_analytics_tracking_id: UA-34692999-7
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - demo
