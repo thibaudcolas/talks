@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: '' | prepend: site.baseurl | prepend: site.url }}"/>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv="refresh" content="0;url={{ page.url | replace:'index.html','' | prepend: '' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta http-equiv="refresh" content="0;url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 </head>
 <body>
     <h1>Redirecting…</h1>
-      <a href="{{ page.url | replace:'index.html','' | prepend: '' | prepend: site.baseurl | prepend: site.url }}">Click here if you are not redirected.<a>
-      <script>location="{{ page.url | replace:'index.html','' | prepend: '' | prepend: site.baseurl | prepend: site.url }}"</script>
+      <a href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">Click here if you are not redirected.<a>
+      <script>location="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"</script>
 </body>
 </html>

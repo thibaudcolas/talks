@@ -2,8 +2,8 @@
 title: Thibaud’s Talks
 email:
 description: 
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://thib.me" # the base hostname & protocol for your site
+baseurl: /talks # the subpath of your site, e.g. /blog/
+url: https://thib.me # the base hostname & protocol for your site
 twitter_username: thibaud_colas
 github_username:  thibaudcolas
 
