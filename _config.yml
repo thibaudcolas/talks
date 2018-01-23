@@ -2,7 +2,7 @@
 title: Thibaud’s Viz
 email:
 description: A group of little visualizations / experiments running in the browser.
-baseurl: "/talks" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://thib.me" # the base hostname & protocol for your site
 twitter_username: thibaud_colas
 github_username:  thibaudcolas
