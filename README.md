@@ -1,7 +1,10 @@
-[Talks](https://thib.me/categories/talks/)
-=====
+# [Talks](https://thib.me/categories/talks/) – Now moved to [thibaudcolas/thibaudcolas](https://github.com/thibaudcolas/thibaudcolas)
 
 Public talks in either french or english, given at various events. All tallks are available at https://thib.me/categories/talks/.
+
+> 🚧 **Talk sources are now over at https://github.com/thibaudcolas/thibaudcolas**
+
+---
 
 ## Deployment
 
